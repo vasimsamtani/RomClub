@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardModule"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="6dp"
+    app:cardBackgroundColor="@color/surface_card"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeColor="@color/surface_stroke"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Header: Module Name + Version Badge -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvModuleName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Play Integrity Fix (NEXT)"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvModuleVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge_official"
+                android:text="v16.0"
+                android:textColor="@color/accent_green"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Author -->
+        <TextView
+            android:id="@+id/tvModuleAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="by chiteroman"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+        <!-- Badges Row: Category + Compatibility -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvModuleCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_search_bar"
+                android:text="SafetyNet"
+                android:textColor="@color/accent_cyan"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCompatibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_search_bar"
+                android:text="Magisk / KSU"
+                android:textColor="@color/primary_light"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tvModuleDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="Bypasses Play Integrity hardware attestation and passes MEETS_DEVICE_INTEGRITY so Google Wallet, Banking Apps, and Netflix work on rooted ROMs."
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="10dp"
+            android:background="@color/surface_stroke" />
+
+        <!-- Domain Preview & Source Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Source &amp; Release"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvModuleDomain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="github.com"
+                android:textColor="@color/primary_light"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Minimalist Pill Action Buttons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGitHub"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:paddingHorizontal="6dp"
+                android:text="GitHub"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_code"
+                app:iconSize="14dp"
+                app:iconTint="@color/accent_cyan"
+                app:strokeColor="@color/surface_stroke" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnModuleCopy"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="44dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="6dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:padding="0dp"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_content_copy"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="15dp"
+                app:iconTint="@color/text_secondary"
+                app:strokeColor="@color/surface_stroke" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDownloadModule"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1.2"
+                android:paddingHorizontal="8dp"
+                android:text="Download Zip"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_file_download"
+                app:iconSize="15dp"
+                app:iconTint="@color/accent_green" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

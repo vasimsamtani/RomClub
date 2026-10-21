@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RomClub</string>
+    <string name="splash_slogan">Flash. Optimize. Unleash.</string>
+    <string name="splash_subtitle">The Ultimate Hub for Custom ROMs, Kernels &amp; Modules</string>
+    <string name="splash_badge">KERNELSU • MAGISK • OPEN SOURCE</string>
+    <string name="splash_version">v2.4 • Cyber Edition</string>
+</resources>

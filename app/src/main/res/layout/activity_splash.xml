@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splashRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <!-- Ambient Glow / Tech Background Circles (Optional Cyber Aesthetic) -->
+    <View
+        android:id="@+id/ambientGlow"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:alpha="0.15"
+        android:background="@drawable/bg_floating_navbar"
+        app:layout_constraintBottom_toBottomOf="@+id/logoCard"
+        app:layout_constraintEnd_toEndOf="@+id/logoCard"
+        app:layout_constraintStart_toStartOf="@+id/logoCard"
+        app:layout_constraintTop_toTopOf="@+id/logoCard" />
+
+    <!-- Center Content Block -->
+    <LinearLayout
+        android:id="@+id/centerContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside">
+
+        <!-- App Logo with High-Tech Glowing Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/logoCard"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            app:cardBackgroundColor="#151926"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="16dp"
+            app:strokeColor="@color/accent_cyan"
+            app:strokeWidth="2dp">
+
+            <ImageView
+                android:id="@+id/ivSplashLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:padding="14dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_app_logo" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- App Title: RomClub -->
+        <LinearLayout
+            android:id="@+id/titleContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.04"
+                android:text="Rom"
+                android:textColor="@color/text_primary"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAppNameAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.04"
+                android:text="Club"
+                android:textColor="@color/accent_cyan"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Slogan: Flash. Optimize. Unleash. -->
+        <TextView
+            android:id="@+id/tvSlogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:letterSpacing="0.08"
+            android:text="@string/splash_slogan"
+            android:textColor="@color/accent_green"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- Subtitle / Mission -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:paddingHorizontal="32dp"
+            android:text="@string/splash_subtitle"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+        <!-- Feature Pill Badge -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/badgeCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#1A2030"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/surface_stroke"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/tvBadgeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.06"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="6dp"
+                android:text="@string/splash_badge"
+                android:textColor="@color/accent_cyan"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <!-- Bottom Loading Section -->
+    <LinearLayout
+        android:id="@+id/bottomContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Progress Indicator -->
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/splashProgress"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:indicatorColor="@color/accent_cyan"
+            app:trackColor="#252A38"
+            app:trackCornerRadius="4dp"
+            app:trackThickness="3dp" />
+
+        <!-- Version & Status -->
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:letterSpacing="0.05"
+            android:text="@string/splash_version"
+            android:textColor="@color/text_muted"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
